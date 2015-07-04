@@ -1,0 +1,25 @@
+{
+  "name": "sortd",
+  "version": "1.0.0",
+  "description": "web app to help sort out your problems",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodeunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomasrstorey/sortd.git"
+  },
+  "author": "Thomas R Storey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thomasrstorey/sortd/issues"
+  },
+  "homepage": "https://github.com/thomasrstorey/sortd",
+  "dependencies": {
+    "express": "^4.13.0",
+    "handlebars": "^3.0.3",
+    "jsonfile": "^2.2.1",
+    "lodash": "^3.10.0"
+  }
+}

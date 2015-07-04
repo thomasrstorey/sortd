@@ -1,0 +1,23 @@
+{
+  "name": "sortd",
+  "version": "1.0.0",
+  "homepage": "https://github.com/thomasrstorey/sortd",
+  "authors": [
+    "thomasrstorey <storey.thomas@gmail.com>"
+  ],
+  "description": "web app for sorting out your problems",
+  "main": "server.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "~2.0.4",
+    "d3": "~3.5.6",
+    "jquery": "~2.1.4"
+  }
+}
