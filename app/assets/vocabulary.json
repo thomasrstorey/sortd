@@ -1,0 +1,123 @@
+{
+  "adverb" : [
+    "carefully",
+    "carefully",
+    "carefully",
+    "carefully",
+    "carefully",
+    "carefully",
+    "quickly",
+    "mechanically",
+    "gently",
+    "gently",
+    "gently",
+    "gently",
+    "gently",
+    "cleanly",
+    "forcefully",
+    "roughly",
+    "cautiously",
+    "swiftly",
+    "solemnly",
+    "robotically",
+    "spontaneously",
+    "fancifully",
+    "curiously",
+    "authentically",
+    "algorithmically",
+    "soporifically",
+    "nostalgically",
+    "gracefully",
+    "smoothly",
+    "smoothly",
+    "smoothly",
+    "smoothly",
+    "smoothly",
+    "smoothly",
+    "madly",
+    "angrily"
+  ],
+  "verb" : [
+    "swap",
+    "interchange",
+    "exchange",
+    "substitute",
+    "trade",
+    "switch"
+  ],
+  "order" : {
+    "first" : [
+      "First,",
+      "To begin,",
+      "Let's get started!",
+      "To start,",
+      "Let's begin:",
+      "Let's jump right in:",
+      "To start sorting out this problem,",
+      "The first step is to",
+      "The best way to begin is to"
+    ],
+    "intermediate" : [
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      "Then,",
+      "Continuing,",
+      "The next step is to",
+      "At this point,",
+      "Before going any further,",
+      "Right here,",
+      "Now,",
+      "At this time,",
+      "With that done,"
+    ],
+    "last" : [
+      "Finally,",
+      "Almost there,",
+      "Just one more step:",
+      "This is the last step:",
+      "To finish,",
+      "And now finally,",
+      "To complete the solution",
+      "To finish up,",
+      "To end,",
+      "The last step is to",
+      "The final step is to"
+    ]
+  },
+  "cterm1" :[
+    "letter",
+    "glyph",
+    "character",
+    "symbol",
+    ""
+  ],
+  "iterm1" :[
+    "position",
+    "index",
+    "location",
+    "slot",
+    ""
+  ],
+  "cterm2" :[
+    "letter",
+    "glyph",
+    "character",
+    "symbol",
+    ""
+  ],
+  "iterm2" :[
+    "position",
+    "index",
+    "location",
+    "slot",
+    ""
+  ],
+  "template" : "<%= order %> <%= adverb %> <%= verb %> the <%= cterm1 %> <%= src %> at <%= iterm1 %> <%= srci %> with the <%= cterm2 %> <%= dest %> at <%= iterm2 %> <%= desti %>."
+}
