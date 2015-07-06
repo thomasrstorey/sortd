@@ -6,10 +6,34 @@
     <link rel="stylesheet" type="text/css" href="../../../bower_components/skeleton/css/skeleton.css"></link>
     <link rel="stylesheet" type="text/css" href="../../../bower_components/skeleton/css/normalize.css"></link>
     <link rel="stylesheet" type="text/css" href="app/assets/css/style.css"></link>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script type="text/javascript" src="../../../bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../../bower_components/d3/d3.min.js"></script>
   </head>
   <body>
+    <div class="container">
+    <nav class="navbar">
+      <div class="container">
+        <div id="logo-col" class="one-third column">
+        <a href="/" id="logo-link"><h1 id="logo-text">Sort'd</h1></a>
+        <div class="navbar-toggle"><i class="fa fa-bars"></i></div>
+      </div>
+      <div class="two-thirds column">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="#share">Share</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="/sort">Sort</a></li>
+        </ul>
+        <ul class="mobile-navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="#share">Share</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="/sort">Sort</a></li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+    </div>
+    <div class="spacer"></div>
     {{#if main}}
       {{> main}}
     {{else if about}}
@@ -20,4 +44,5 @@
     {{> loading}}
     {{> share}}
   </body>
+  <script type="text/javascript" src="/app/assets/js/navbar.js"></script>
 </html>

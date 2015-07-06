@@ -13,7 +13,7 @@ a web app for sorting out your problems
 
 ### frontend
 
-- [ ] basic template (handlebars, css)
+- [x] basic template (handlebars, css)
 - [ ] individual page layouts
   - [ ] landing (100% width, big pictures)
   - [ ] about (me pic, bio)
