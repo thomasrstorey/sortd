@@ -5,7 +5,7 @@ a web app for sorting out your problems
 
 ### backend
 
-- [ ] receive string, output steps, with all text, as json
+- [x] receive string, output steps, with all text, as json
 - [ ] save steps to retrieveable json file
   - [ ] generate unique hash for each set of steps and text
 - [ ] send json according to received hash
