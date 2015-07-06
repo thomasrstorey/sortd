@@ -6,8 +6,8 @@ a web app for sorting out your problems
 ### backend
 
 - [x] receive string, output steps, with all text, as json
-- [ ] save steps to retrieveable json file
-  - [ ] generate unique hash for each set of steps and text
+- [x] save steps to retrieveable json file
+  - [x] generate unique hash for each set of steps and text
 - [ ] send json according to received hash
 - [ ] send json after generating steps (callback for saving should call the send function using the hash)
 

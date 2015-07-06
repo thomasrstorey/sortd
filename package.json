@@ -18,6 +18,7 @@
   "homepage": "https://github.com/thomasrstorey/sortd",
   "dependencies": {
     "body-parser": "^1.13.2",
+    "crypto": "0.0.3",
     "express": "^4.13.0",
     "handlebars": "^3.0.3",
     "jsonfile": "^2.2.1",
