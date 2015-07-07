@@ -9,20 +9,32 @@ module.exports = function (app){
   var crypto = require('crypto');
   var templater = require(path.join(__dirname, './lib/templater.js'));
   var md5 = crypto.createHash('md5');
+
   app.get('/sort', function (req, res){
-    templater.compilePage("sort", function(page){
+    templater.compilePage(["sort", "renderer", "loading", "share"], function(page){
+      res.send(page);
+    });
+  });
+
+  app.get('/show', function(req, res){
+    templater.compilePage(["show", "renderer", "loading", "share"], function(page){
       res.send(page);
     });
   });
 
   app.get('/about', function (req, res){
-    templater.compilePage("about", function(page){
+    templater.compilePage(["about"], function(page){
       res.send(page);
     });
   });
 
   app.get('/api/show', function(req, res){
-    res.send("<h1>"+req.query.id+"</h1>");
+    var filepath = path.join(__dirname, '/db/', req.query.id + '.json');
+    console.log("retrieving: " + filepath);
+    jf.readFile(filepath, function(err, data){
+      if(err) console.log(err);
+      res.send(data);
+    })
   });
 
   app.post('/api/sort', function(req, res){
@@ -30,20 +42,21 @@ module.exports = function (app){
     console.log(prob);
     var stepsObj = qsgen.generateSteps(prob);
     dgen.describe(stepsObj.steps, function(stepsd){
-        var filename = md5.update(prob.replace(' ', '_') + Date.now(), 'utf8').digest('hex') + ".json";
+        var hash = md5.update(prob.replace(' ', '_') + Date.now(), 'utf8').digest('hex');
+        var filename = hash + ".json";
         var filepath = path.join(__dirname, '/db/', filename);
         console.log("writing: " + filepath);
         stepsObj.steps = stepsd;
         stepsObj.endText = stepsObj.steps[stepsObj.steps.length-1].afterStr;
         jf.writeFile(filepath, stepsObj, function(err){
           if(err) console.log(err);
-          res.send(stepsd);
+          res.send(hash);
         });
     });
   });
 
   app.get('/', function (req, res){
-    templater.compilePage("main", function(page){
+    templater.compilePage(["main"], function(page){
       res.send(page);
     });
   });

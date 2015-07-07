@@ -4,16 +4,14 @@ module.exports = (function (){
   var handlebars = require('handlebars');
   var fs = require('fs');
 
-  function compilePage(page, cb){
+  function compilePage(pages, cb){
     // setup parameters
-    var params = {
-      main: false,
-      about: false,
-      sort: false,
-    };
-    params[page] = true;
+    var params = {};
+    pages.forEach(function(page){
+      params[page] = true;
+    });
     // register partials
-    loadPartials([page, 'loading', 'share'], function(){
+    loadPartials(pages, function(){
       // render template
       loadIndex(function(source){
         var template = handlebars.compile(source);

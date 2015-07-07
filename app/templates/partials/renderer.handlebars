@@ -1,0 +1,142 @@
+<div class="d3-container">
+
+</div>
+
+<script type="text/javascript">
+var margin = {top: 80, right: 20, bottom: 80, left: 20},
+  lineHeight = 20,
+  width = $(".container").width() - margin.left - margin.right,
+  height = (200) - margin.top - margin.bottom;
+
+  var svg = d3.select(".d3-container").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .attr("fill", "gray")
+    .attr("style", "background-color: #EEE;")
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  var solution;
+  var filepath = "/api/show?id=" + getID();
+  var text;
+  var data;
+  var index = 0;
+
+  d3.json(filepath, function(error, json) {
+    if (error) return console.warn(error);
+    solution = json;
+    var next = init(solution.steps);
+    var intervalID = window.setInterval(next, 5000);
+  });
+  // var next = init(steps);
+
+  function getID(){
+    var search = window.location.search;
+    console.log(search);
+    var id = /^\?id=\w+/g.exec(search);
+    return id[0].slice(4);
+  }
+
+  function offset(chars, lheight){
+    var charObjs = [];
+    var widthSum = 0;
+    var lineSum = 0;
+    chars.forEach(function (c, i, arr){
+      var cw = 5;
+      if(c != ' '){
+        var ty = svg.append("text")
+            .attr("style", "font-size: "+lheight+"px;")
+            .text(c);
+        cw = ty.node().getBBox().width;
+        ty.remove();
+      }
+      var x, y;
+      if(widthSum + cw <= width - margin.left - margin.right){
+        x = widthSum + margin.left;
+        widthSum += cw;
+        y = (lheight+5) * lineSum;
+      } else {
+        // too wide, put on next line
+        widthSum = 0;
+        x = widthSum + margin.left;
+        widthSum+=cw;
+        lineSum++;
+        y = (lheight+5) * lineSum;
+        if(y > height){
+          $("svg").height(y + margin.top + margin.bottom);
+        }
+      }
+      charObjs.push({text: c, x: x, y: y, id: i});
+    });
+    return charObjs;
+  }
+
+  function init(steps){
+
+     var charObjs = offset(steps[index].beforeStr.split(''), lineHeight);
+     text = svg.selectAll("text")
+        .data(charObjs)
+        .enter()
+        .append("text")
+        .attr("style", "font-size: "+lineHeight+"px;");
+     text = text
+        .attr("x", function(d) {return d.x})
+        .attr("y", function(d) {return d.y})
+        .text(function(d) {return d.text});
+      return function(){
+        var step = steps[index];
+        swap(step.src, step.dest);
+        shift(index, step);
+        index++;
+      }
+  }
+
+  function shift(index, step){
+    var resultArr = step.afterStr.split('');
+    data = offset(resultArr, lineHeight);
+    text = svg.selectAll("text")
+       .data(data);
+    text.attr("class", "update");
+
+    text.enter()
+       .append("text")
+       .attr("style", "font-size: "+lineHeight+"px;")
+       .attr("x", function(d) {return d.x})
+       .attr("y", function(d) {return d.y})
+       .text(function(d) {return d.text});
+
+    text.transition()
+       .attr("x", function(d, i) {return d.x})
+       .attr("y", function(d, i) {return d.y})
+       .text(function(d, i) {return d.text});
+
+    text.exit().remove();
+  }
+
+  function swap(aIndex, bIndex){
+    var charA = text.select(function(d, i){return i == aIndex ? this : null});
+    var charB = text.select(function(d, i){return i == bIndex ? this : null});
+    if(charA != null && charB != null){
+      var aDest = {x: charB.datum().x, y: charB.datum().y};
+      var bDest = {x: charA.datum().x, y: charA.datum().y};
+      charA.transition()
+        .attr("x", aDest.x)
+        .attr("y", aDest.y);
+      charB.transition()
+        .attr("x", bDest.x)
+        .attr("y", bDest.y);
+    }
+  }
+  // var msg = "lorem ipsum dolor sit amet;alskg;lak ;lakeh;l ah;ahg l ahewgkjhaekjhg  khajsf kjahsg k akshjf kjas fk  akjhfg jh akefhk kja sfkhjgaksfj hgkasjhd f  jkhasf kasgfjg asg kjhas fk kajsh fgjahksg kjas dfhjghj k kfhj asjhdf kasdkjashdf k safj gasfd kagsdfk jhasfd";
+  // var msgArr = msg.split('');
+  // var charObjs = offset(msgArr, margin, lineHeight, svg);
+ //  text = svg.selectAll("text")
+ //     .data(charObjs)
+ //     .enter()
+ //     .append("text")
+ //     .attr("style", "font-size: "+lineHeight+"px;");
+ // text = text
+ //         .attr("x", function(d) {return d.x})
+ //         .attr("y", function(d) {return d.y})
+ //         .text(function(d) {return d.text});
+</script>
