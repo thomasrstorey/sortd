@@ -38,7 +38,7 @@ module.exports = function (app){
   });
 
   app.post('/api/sort', function(req, res){
-    var prob = req.body.problem;
+    var prob = req.body.problem.value;
     console.log(prob);
     var stepsObj = qsgen.generateSteps(prob);
     dgen.describe(stepsObj.steps, function(stepsd){

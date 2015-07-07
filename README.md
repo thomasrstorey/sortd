@@ -21,7 +21,7 @@ a web app for sorting out your problems
 - [x] d3 canvas
   - [x] bind and render text
   - [x] animate changes according to json
-- [ ] send text to server with jq + ajax
-- [ ] give json to d3 to bind, iterate through
+- [x] send text to server with jq + ajax
+- [x] give json to d3 to bind, iterate through
 - [ ] loading modal
 - [ ] share modal (https://dev.twitter.com/web/tweet-button https://developers.facebook.com/docs/sharing/web)

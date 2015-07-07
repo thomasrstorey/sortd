@@ -1,0 +1,237 @@
+{
+  "startText": "okie dokie artichokie",
+  "endText": "  acdeeehiiiikkkooort",
+  "steps": [
+    {
+      "src": 4,
+      "dest": 0,
+      "beforeStr": "okie dokie artichokie",
+      "afterStr": " kieodokie artichokie",
+      "description": "Let's get started! carefully trade the character  at 4 with the o at 0."
+    },
+    {
+      "src": 5,
+      "dest": 1,
+      "beforeStr": " kieodokie artichokie",
+      "afterStr": " dieokokie artichokie",
+      "description": "At this point, algorithmically exchange the letter d at index 5 with the letter k at location 1."
+    },
+    {
+      "src": 10,
+      "dest": 2,
+      "beforeStr": " dieokokie artichokie",
+      "afterStr": " d eokokieiartichokie",
+      "description": "The next step is to gently trade the character  at position 10 with the symbol i at 2."
+    },
+    {
+      "src": 11,
+      "dest": 3,
+      "beforeStr": " d eokokieiartichokie",
+      "afterStr": " d aokokieiertichokie",
+      "description": "Spontaneously trade the a at location 11 with the letter e at index 3."
+    },
+    {
+      "src": 15,
+      "dest": 4,
+      "beforeStr": " d aokokieiertichokie",
+      "afterStr": " d ackokieiertiohokie",
+      "description": "Cleanly exchange the c at index 15 with the letter o at index 4."
+    },
+    {
+      "src": 20,
+      "dest": 5,
+      "beforeStr": " d ackokieiertiohokie",
+      "afterStr": " d aceokieiertiohokik",
+      "description": "Gently substitute the symbol e at index 20 with the letter k at position 5."
+    },
+    {
+      "src": 2,
+      "dest": 1,
+      "beforeStr": " d aceokieiertiohokik",
+      "afterStr": "  daceokieiertiohokik",
+      "description": "Mechanically swap the  at location 2 with the character d at index 1."
+    },
+    {
+      "src": 3,
+      "dest": 2,
+      "beforeStr": "  daceokieiertiohokik",
+      "afterStr": "  adceokieiertiohokik",
+      "description": "Nostalgically switch the character a at index 3 with the d at slot 2."
+    },
+    {
+      "src": 4,
+      "dest": 3,
+      "beforeStr": "  adceokieiertiohokik",
+      "afterStr": "  acdeokieiertiohokik",
+      "description": "Gently trade the symbol c at location 4 with the character d at 3."
+    },
+    {
+      "src": 2,
+      "dest": 2,
+      "beforeStr": "  acdeokieiertiohokik",
+      "afterStr": "  acdeokieiertiohokik",
+      "description": "At this time, smoothly exchange the symbol a at slot 2 with the symbol a at position 2."
+    },
+    {
+      "src": 1,
+      "dest": 0,
+      "beforeStr": "  acdeokieiertiohokik",
+      "afterStr": "  acdeokieiertiohokik",
+      "description": "Smoothly substitute the letter  at slot 1 with the symbol  at position 0."
+    },
+    {
+      "src": 8,
+      "dest": 6,
+      "beforeStr": "  acdeokieiertiohokik",
+      "afterStr": "  acdeikoeiertiohokik",
+      "description": "Spontaneously substitute the character i at location 8 with the glyph o at 6."
+    },
+    {
+      "src": 9,
+      "dest": 7,
+      "beforeStr": "  acdeikoeiertiohokik",
+      "afterStr": "  acdeieokiertiohokik",
+      "description": "Smoothly swap the e at 9 with the k at slot 7."
+    },
+    {
+      "src": 10,
+      "dest": 8,
+      "beforeStr": "  acdeieokiertiohokik",
+      "afterStr": "  acdeieikoertiohokik",
+      "description": "Right here, angrily swap the character i at location 10 with the character o at slot 8."
+    },
+    {
+      "src": 11,
+      "dest": 9,
+      "beforeStr": "  acdeieikoertiohokik",
+      "afterStr": "  acdeieieokrtiohokik",
+      "description": "Algorithmically switch the character e at location 11 with the glyph k at position 9."
+    },
+    {
+      "src": 14,
+      "dest": 10,
+      "beforeStr": "  acdeieieokrtiohokik",
+      "afterStr": "  acdeieieikrtoohokik",
+      "description": "At this point, carefully substitute the character i at position 14 with the character o at 10."
+    },
+    {
+      "src": 16,
+      "dest": 11,
+      "beforeStr": "  acdeieieikrtoohokik",
+      "afterStr": "  acdeieieihrtookokik",
+      "description": "Swiftly substitute the h at slot 16 with the letter k at location 11."
+    },
+    {
+      "src": 19,
+      "dest": 12,
+      "beforeStr": "  acdeieieihrtookokik",
+      "afterStr": "  acdeieieihitookokrk",
+      "description": "Then, solemnly trade the glyph i at slot 19 with the r at position 12."
+    },
+    {
+      "src": 20,
+      "dest": 13,
+      "beforeStr": "  acdeieieihitookokrk",
+      "afterStr": "  acdeieieihikookokrt",
+      "description": "The next step is to mechanically trade the character k at position 20 with the glyph t at position 13."
+    },
+    {
+      "src": 7,
+      "dest": 6,
+      "beforeStr": "  acdeieieihikookokrt",
+      "afterStr": "  acdeeiieihikookokrt",
+      "description": "Spontaneously exchange the glyph e at position 7 with the character i at location 6."
+    },
+    {
+      "src": 9,
+      "dest": 7,
+      "beforeStr": "  acdeeiieihikookokrt",
+      "afterStr": "  acdeeeiiihikookokrt",
+      "description": "At this point, smoothly substitute the symbol e at position 9 with the symbol i at slot 7."
+    },
+    {
+      "src": 11,
+      "dest": 8,
+      "beforeStr": "  acdeeeiiihikookokrt",
+      "afterStr": "  acdeeehiiiikookokrt",
+      "description": "Now, gently swap the h at position 11 with the glyph i at position 8."
+    },
+    {
+      "src": 12,
+      "dest": 9,
+      "beforeStr": "  acdeeehiiiikookokrt",
+      "afterStr": "  acdeeehiiiikookokrt",
+      "description": "Carefully substitute the symbol i at 12 with the symbol i at index 9."
+    },
+    {
+      "src": 8,
+      "dest": 8,
+      "beforeStr": "  acdeeehiiiikookokrt",
+      "afterStr": "  acdeeehiiiikookokrt",
+      "description": "Continuing, angrily exchange the symbol h at index 8 with the glyph h at position 8."
+    },
+    {
+      "src": 7,
+      "dest": 6,
+      "beforeStr": "  acdeeehiiiikookokrt",
+      "afterStr": "  acdeeehiiiikookokrt",
+      "description": "Carefully interchange the letter e at slot 7 with the e at 6."
+    },
+    {
+      "src": 12,
+      "dest": 10,
+      "beforeStr": "  acdeeehiiiikookokrt",
+      "afterStr": "  acdeeehiiiikookokrt",
+      "description": "Before going any further, gently swap the letter i at index 12 with the glyph i at slot 10."
+    },
+    {
+      "src": 12,
+      "dest": 11,
+      "beforeStr": "  acdeeehiiiikookokrt",
+      "afterStr": "  acdeeehiiiikookokrt",
+      "description": "Before going any further, mechanically switch the i at position 12 with the i at position 11."
+    },
+    {
+      "src": 20,
+      "dest": 20,
+      "beforeStr": "  acdeeehiiiikookokrt",
+      "afterStr": "  acdeeehiiiikookokrt",
+      "description": "At this time, smoothly exchange the character t at slot 20 with the character t at position 20."
+    },
+    {
+      "src": 19,
+      "dest": 19,
+      "beforeStr": "  acdeeehiiiikookokrt",
+      "afterStr": "  acdeeehiiiikookokrt",
+      "description": "Gently interchange the r at position 19 with the glyph r at 19."
+    },
+    {
+      "src": 18,
+      "dest": 14,
+      "beforeStr": "  acdeeehiiiikookokrt",
+      "afterStr": "  acdeeehiiiikkokoort",
+      "description": "At this time, curiously trade the letter k at slot 18 with the character o at location 14."
+    },
+    {
+      "src": 16,
+      "dest": 15,
+      "beforeStr": "  acdeeehiiiikkokoort",
+      "afterStr": "  acdeeehiiiikkkooort",
+      "description": "With that done, swiftly exchange the character k at location 16 with the symbol o at 15."
+    },
+    {
+      "src": 18,
+      "dest": 16,
+      "beforeStr": "  acdeeehiiiikkkooort",
+      "afterStr": "  acdeeehiiiikkkooort",
+      "description": "Right here, curiously exchange the o at slot 18 with the letter o at slot 16."
+    },
+    {
+      "src": 18,
+      "dest": 17,
+      "beforeStr": "  acdeeehiiiikkkooort",
+      "afterStr": "  acdeeehiiiikkkooort",
+      "description": "Finally, roughly swap the letter o at index 18 with the o at slot 17."
+    }
+  ]
+}

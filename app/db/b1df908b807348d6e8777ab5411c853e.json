@@ -1,0 +1,202 @@
+{
+  "startText": "hash dont fail plz",
+  "endText": "   aadfhhillnopstz",
+  "steps": [
+    {
+      "src": 17,
+      "dest": 17,
+      "beforeStr": "hash dont fail plz",
+      "afterStr": "hash dont fail plz",
+      "description": "The best way to begin is to carefully trade the symbol z at index 17 with the glyph z at slot 17."
+    },
+    {
+      "src": 3,
+      "dest": 2,
+      "beforeStr": "hash dont fail plz",
+      "afterStr": "hahs dont fail plz",
+      "description": "Now, smoothly switch the glyph h at position 3 with the character s at slot 2."
+    },
+    {
+      "src": 4,
+      "dest": 3,
+      "beforeStr": "hahs dont fail plz",
+      "afterStr": "hah sdont fail plz",
+      "description": "Soporifically trade the glyph  at 4 with the letter s at location 3."
+    },
+    {
+      "src": 5,
+      "dest": 4,
+      "beforeStr": "hah sdont fail plz",
+      "afterStr": "hah dsont fail plz",
+      "description": "Carefully switch the glyph d at location 5 with the glyph s at slot 4."
+    },
+    {
+      "src": 9,
+      "dest": 5,
+      "beforeStr": "hah dsont fail plz",
+      "afterStr": "hah d ontsfail plz",
+      "description": "Continuing, smoothly trade the symbol  at location 9 with the letter s at location 5."
+    },
+    {
+      "src": 10,
+      "dest": 6,
+      "beforeStr": "hah d ontsfail plz",
+      "afterStr": "hah d fntsoail plz",
+      "description": "With that done, cleanly exchange the character f at 10 with the letter o at slot 6."
+    },
+    {
+      "src": 11,
+      "dest": 7,
+      "beforeStr": "hah d fntsoail plz",
+      "afterStr": "hah d fatsonil plz",
+      "description": "Then, cautiously swap the symbol a at index 11 with the n at location 7."
+    },
+    {
+      "src": 12,
+      "dest": 8,
+      "beforeStr": "hah d fatsonil plz",
+      "afterStr": "hah d faisontl plz",
+      "description": "Before going any further, carefully substitute the i at index 12 with the symbol t at 8."
+    },
+    {
+      "src": 14,
+      "dest": 9,
+      "beforeStr": "hah d faisontl plz",
+      "afterStr": "hah d fai ontlsplz",
+      "description": "Carefully interchange the  at slot 14 with the character s at location 9."
+    },
+    {
+      "src": 16,
+      "dest": 10,
+      "beforeStr": "hah d fai ontlsplz",
+      "afterStr": "hah d fai lntlspoz",
+      "description": "Carefully interchange the glyph l at index 16 with the symbol o at 10."
+    },
+    {
+      "src": 9,
+      "dest": 0,
+      "beforeStr": "hah d fai lntlspoz",
+      "afterStr": " ah d faihlntlspoz",
+      "description": "Now, smoothly substitute the character  at slot 9 with the glyph h at index 0."
+    },
+    {
+      "src": 3,
+      "dest": 2,
+      "beforeStr": " ah d faihlntlspoz",
+      "afterStr": " a hd faihlntlspoz",
+      "description": "Right here, smoothly swap the letter  at 3 with the letter h at 2."
+    },
+    {
+      "src": 4,
+      "dest": 3,
+      "beforeStr": " a hd faihlntlspoz",
+      "afterStr": " a dh faihlntlspoz",
+      "description": "Then, smoothly interchange the d at index 4 with the character h at location 3."
+    },
+    {
+      "src": 5,
+      "dest": 4,
+      "beforeStr": " a dh faihlntlspoz",
+      "afterStr": " a d hfaihlntlspoz",
+      "description": "Roughly substitute the symbol  at position 5 with the glyph h at 4."
+    },
+    {
+      "src": 6,
+      "dest": 5,
+      "beforeStr": " a d hfaihlntlspoz",
+      "afterStr": " a d fhaihlntlspoz",
+      "description": "Solemnly swap the letter f at index 6 with the h at index 5."
+    },
+    {
+      "src": 7,
+      "dest": 6,
+      "beforeStr": " a d fhaihlntlspoz",
+      "afterStr": " a d fahihlntlspoz",
+      "description": "The next step is to cleanly exchange the letter a at index 7 with the h at position 6."
+    },
+    {
+      "src": 9,
+      "dest": 7,
+      "beforeStr": " a d fahihlntlspoz",
+      "afterStr": " a d fahihlntlspoz",
+      "description": "Cautiously switch the h at 9 with the glyph h at slot 7."
+    },
+    {
+      "src": 2,
+      "dest": 1,
+      "beforeStr": " a d fahihlntlspoz",
+      "afterStr": "  ad fahihlntlspoz",
+      "description": "Curiously trade the letter  at slot 2 with the letter a at slot 1."
+    },
+    {
+      "src": 4,
+      "dest": 2,
+      "beforeStr": "  ad fahihlntlspoz",
+      "afterStr": "   dafahihlntlspoz",
+      "description": "Cautiously switch the symbol  at slot 4 with the character a at position 2."
+    },
+    {
+      "src": 6,
+      "dest": 3,
+      "beforeStr": "   dafahihlntlspoz",
+      "afterStr": "   aafdhihlntlspoz",
+      "description": "At this point, smoothly trade the glyph a at location 6 with the symbol d at 3."
+    },
+    {
+      "src": 2,
+      "dest": 1,
+      "beforeStr": "   aafdhihlntlspoz",
+      "afterStr": "   aafdhihlntlspoz",
+      "description": "Continuing, smoothly interchange the letter  at position 2 with the  at position 1."
+    },
+    {
+      "src": 6,
+      "dest": 5,
+      "beforeStr": "   aafdhihlntlspoz",
+      "afterStr": "   aadfhihlntlspoz",
+      "description": "Continuing, gently trade the letter d at position 6 with the symbol f at index 5."
+    },
+    {
+      "src": 9,
+      "dest": 8,
+      "beforeStr": "   aadfhihlntlspoz",
+      "afterStr": "   aadfhhilntlspoz",
+      "description": "Now, carefully trade the glyph h at slot 9 with the symbol i at position 8."
+    },
+    {
+      "src": 13,
+      "dest": 12,
+      "beforeStr": "   aadfhhilntlspoz",
+      "afterStr": "   aadfhhilnltspoz",
+      "description": "Before going any further, algorithmically exchange the l at location 13 with the glyph t at 12."
+    },
+    {
+      "src": 16,
+      "dest": 13,
+      "beforeStr": "   aadfhhilnltspoz",
+      "afterStr": "   aadfhhilnlosptz",
+      "description": "At this point, algorithmically substitute the character o at 16 with the character t at position 13."
+    },
+    {
+      "src": 12,
+      "dest": 11,
+      "beforeStr": "   aadfhhilnlosptz",
+      "afterStr": "   aadfhhillnosptz",
+      "description": "At this point, angrily interchange the l at location 12 with the glyph n at 11."
+    },
+    {
+      "src": 16,
+      "dest": 16,
+      "beforeStr": "   aadfhhillnosptz",
+      "afterStr": "   aadfhhillnosptz",
+      "description": "Carefully substitute the t at 16 with the character t at position 16."
+    },
+    {
+      "src": 15,
+      "dest": 14,
+      "beforeStr": "   aadfhhillnosptz",
+      "afterStr": "   aadfhhillnopstz",
+      "description": "Finally, roughly swap the glyph p at position 15 with the symbol s at index 14."
+    }
+  ]
+}
