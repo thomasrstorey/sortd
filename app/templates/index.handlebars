@@ -8,10 +8,18 @@
     <link rel="stylesheet" type="text/css" href="../../../bower_components/skeleton/css/normalize.css"></link>
     <link rel="stylesheet" type="text/css" href="app/assets/css/style.css"></link>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../bower_components/progressbar.js/dist/progressbar.min.js"></script>
     <script type="text/javascript" src="../../../bower_components/d3/d3.js"></script>
   </head>
   <body>
+    {{#if loading}}
+    {{> loading}}
+    {{/if}}
     <div class="container">
     <nav class="navbar">
       <div class="container">
@@ -34,6 +42,7 @@
       </div>
     </nav>
     </div>
+    <div class="spacer"></div>
     {{#if main}}
       {{> main}}
     {{else if about}}
@@ -42,9 +51,6 @@
         {{> show}}
     {{else if sort}}
       {{> sort}}
-    {{/if}}
-    {{#if loading}}
-    {{> loading}}
     {{/if}}
     {{#if share}}
     {{> share}}

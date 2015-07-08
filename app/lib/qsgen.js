@@ -57,9 +57,10 @@ module.exports = (function (){
         arr[i] = arr[storei];
         arr[storei] = tmp;
         // only store moves that actually swap values (not swapping with itself)
-        if(storei != i)
+        if(storei != i) {
           stepsArr.push( { src: i, dest: storei, beforeStr: curr.join(''),
-                          afterStr: arr.join(''), description: '' });
+          afterStr: arr.join(''), description: '' });
+        }
         storei++;
       }
     }

@@ -4,7 +4,7 @@
 
 <script type="text/javascript">
 var margin = {top: 80, right: 20, bottom: 80, left: 20},
-  lineHeight = 20,
+  lineHeight = 25,
   width = $(".two-thirds").width() - margin.left - margin.right,
   height = (200) - margin.top - margin.bottom;
 
@@ -25,15 +25,21 @@ var margin = {top: 80, right: 20, bottom: 80, left: 20},
   var text;
   var data;
   var index = 0;
-  // TRIGGER LOAD MODAL
-  d3.json(filepath, function(error, json) {
-    if (error) return console.warn(error);
-    solution = json;
-    var iterator = init(solution.steps);
-    $("#button-back").click(iterator.back);
-    $("#button-next").click(iterator.next);
-    // WAIT ABOUT 3 SECONDS AND THEN CLOSE LOAD MODAL
+
+  $("document").ready(function(){
+    // Trigger loading modal
+    startLoadingModal();
+    d3.json(filepath, function(error, json) {
+      if (error) return console.warn(error);
+      // Close loading modal
+      finishLoadingModal();
+      solution = json;
+      var iterator = init(solution.steps);
+      $("#button-back").click(iterator.back);
+      $("#button-next").click(iterator.next);
+    });
   });
+
 
   function getID(){
     var search = window.location.search;
@@ -123,14 +129,20 @@ var margin = {top: 80, right: 20, bottom: 80, left: 20},
 
     text.enter()
        .append("text")
-       .attr("style", "font-size: "+lineHeight+"px;")
        .attr("x", function(d) {return d.x})
        .attr("y", function(d) {return d.y})
        .text(function(d) {return d.text});
-
+    // text.
     text.transition()
        .attr("x", function(d, i) {return d.x})
        .attr("y", function(d, i) {return d.y})
+       .attr("style", function(d, i){
+         if(i == src || i == dest){
+           return "font-weight: 700; font-size:"+lineHeight+"px;"
+         } else {
+           return "font-weight: 400; font-size:"+lineHeight+"px;"
+         }
+       })
        .text(function(d, i) {return d.text})
        .delay(function(d, i) {return (i == src || i == dest) ? 0 :500})
        .duration(500);
@@ -148,10 +160,12 @@ var margin = {top: 80, right: 20, bottom: 80, left: 20},
       charA
         .attr("x", next[bIndex].x)
         .attr("y", next[bIndex].y)
+        .attr("style", "font-weight: 700; font-size:"+lineHeight+"px;")
         .text(next[bIndex].text);
       charB
         .attr("x", next[aIndex].x)
         .attr("y", next[aIndex].y)
+        .attr("style", "font-weight: 700; font-size:"+lineHeight+"px;")
         .text(next[aIndex].text);
     }
   }

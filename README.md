@@ -15,13 +15,13 @@ a web app for sorting out your problems
 
 - [x] basic template (handlebars, css)
 - [ ] individual page layouts
-  - [ ] landing (100% width, big pictures)
+  - [x] landing (100% width, big pictures)
   - [ ] about (me pic, bio)
-  - [ ] sort (d3 canvas, text directions, next/back, stage directions)
+  - [x] sort (d3 canvas, text directions, next/back, stage directions)
 - [x] d3 canvas
   - [x] bind and render text
   - [x] animate changes according to json
 - [x] send text to server with jq + ajax
 - [x] give json to d3 to bind, iterate through
-- [ ] loading modal
+- [x] loading modal
 - [ ] share modal (https://dev.twitter.com/web/tweet-button https://developers.facebook.com/docs/sharing/web)

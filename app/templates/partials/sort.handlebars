@@ -1,10 +1,16 @@
 <div class="container">
+  <label for="problem"><h1>Sort out a Problem</h1></label>
   <div class="row">
     <form method="post" action="#">
       <div class="row">
-        <label for="problem">Describe Your Problem</label>
-         <textarea class="u-full-width" placeholder="" name="problem" id="problem"></textarea>
+        <div class="two-thirds column">
+         <textarea class="u-full-width" rows="5" placeholder="" name="problem" id="problem-area"></textarea>
          <input class="button-primary" value="Submit" type="submit" id="submit">
+       </div>
+       <div class="one-third column">
+       <p class="instructions-text">Please describe your problem in a few words. Be specific, but succinct.</p>
+       <p class="remaining-chars">Remaining characters:</p>
+       </div>
       </div>
     </form>
   </div>
@@ -17,5 +23,16 @@
       console.log(res);
       window.location.href = "http://" + window.location.host + "/show?id=" + res;
     });
+  });
+
+  $(".remaining-chars").text("Remaining characters: " + (200 - $("textarea").val().length));
+
+  $("textarea").bind('input propertychange', function() {
+    $(".remaining-chars").text("Remaining characters: " + (200 - this.value.length));
+    if(200 - this.value.length < 0){
+      $("#submit").prop("disabled", true);
+    } else {
+      $("#submit").prop('disabled', false);
+    }
   });
 </script>

@@ -1,1 +1,33 @@
-<h2>loading</h2>
+<div class="loading-modal-container">
+    <div class="container">
+      <div class="row">
+      <div class="loading-modal">
+      <div class="progress" id="progress"></div>
+    </div>
+  </div>
+  </div>
+  <script type="text/javascript">
+  var line = new ProgressBar.Circle('#progress', {
+      color: '#7ad9ff',
+      duration: 1000,
+      easing: 'easeInOut',
+      strokeWidth: 10
+  });
+  var loadInterval;
+  function startLoadingModal(){
+    $(".loading-modal-container").toggleClass("show");
+    var complete = 0.1;
+    loadInterval = window.setInterval(function(){
+      line.animate(complete);
+      complete+=0.1;
+    }, 500);
+  }
+  function finishLoadingModal(){
+    clearInterval(loadInterval);
+    line.animate(1.0, function(){
+      console.log("done!");
+      $(".loading-modal-container").toggleClass("show");
+    });
+  }
+  </script>
+</div>
