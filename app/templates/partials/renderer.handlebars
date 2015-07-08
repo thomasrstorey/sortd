@@ -5,16 +5,20 @@
 <script type="text/javascript">
 var margin = {top: 80, right: 20, bottom: 80, left: 20},
   lineHeight = 20,
-  width = $(".container").width() - margin.left - margin.right,
+  width = $(".two-thirds").width() - margin.left - margin.right,
   height = (200) - margin.top - margin.bottom;
 
   var svg = d3.select(".d3-container").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .attr("fill", "gray")
-    .attr("style", "background-color: #EEE;")
+    .attr("style", "background-color: #EEE; border-radius: 4px;")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  window.addEventListener("resize", function(event){
+    $("svg").width($(".two-thirds").width());
+  });
 
   var solution;
   var filepath = "/api/show?id=" + getID();
@@ -26,7 +30,7 @@ var margin = {top: 80, right: 20, bottom: 80, left: 20},
     if (error) return console.warn(error);
     solution = json;
     var next = init(solution.steps);
-    var intervalID = window.setInterval(next, 5000);
+    var intervalID = window.setInterval(next, 2000);
   });
   // var next = init(steps);
 
@@ -85,13 +89,14 @@ var margin = {top: 80, right: 20, bottom: 80, left: 20},
         .text(function(d) {return d.text});
       return function(){
         var step = steps[index];
-        swap(step.src, step.dest);
-        shift(index, step);
+        swap(step.src, step.dest, step);
+        shift(index, step, step.src, step.dest);
+        $("#description-text").html(step.description);
         index++;
       }
   }
 
-  function shift(index, step){
+  function shift(index, step, src, dest){
     var resultArr = step.afterStr.split('');
     data = offset(resultArr, lineHeight);
     text = svg.selectAll("text")
@@ -108,35 +113,28 @@ var margin = {top: 80, right: 20, bottom: 80, left: 20},
     text.transition()
        .attr("x", function(d, i) {return d.x})
        .attr("y", function(d, i) {return d.y})
-       .text(function(d, i) {return d.text});
+       .text(function(d, i) {return d.text})
+       .delay(function(d, i) {return (i == src || i == dest) ? 0 :500})
+       .duration(500);
 
     text.exit().remove();
   }
 
-  function swap(aIndex, bIndex){
+  function swap(aIndex, bIndex, step){
+    var next = offset(step.beforeStr.split(''), lineHeight);
     var charA = text.select(function(d, i){return i == aIndex ? this : null});
     var charB = text.select(function(d, i){return i == bIndex ? this : null});
     if(charA != null && charB != null){
       var aDest = {x: charB.datum().x, y: charB.datum().y};
       var bDest = {x: charA.datum().x, y: charA.datum().y};
-      charA.transition()
-        .attr("x", aDest.x)
-        .attr("y", aDest.y);
-      charB.transition()
-        .attr("x", bDest.x)
-        .attr("y", bDest.y);
+      charA
+        .attr("x", next[bIndex].x)
+        .attr("y", next[bIndex].y)
+        .text(next[bIndex].text);
+      charB
+        .attr("x", next[aIndex].x)
+        .attr("y", next[aIndex].y)
+        .text(next[aIndex].text);
     }
   }
-  // var msg = "lorem ipsum dolor sit amet;alskg;lak ;lakeh;l ah;ahg l ahewgkjhaekjhg  khajsf kjahsg k akshjf kjas fk  akjhfg jh akefhk kja sfkhjgaksfj hgkasjhd f  jkhasf kasgfjg asg kjhas fk kajsh fgjahksg kjas dfhjghj k kfhj asjhdf kasdkjashdf k safj gasfd kagsdfk jhasfd";
-  // var msgArr = msg.split('');
-  // var charObjs = offset(msgArr, margin, lineHeight, svg);
- //  text = svg.selectAll("text")
- //     .data(charObjs)
- //     .enter()
- //     .append("text")
- //     .attr("style", "font-size: "+lineHeight+"px;");
- // text = text
- //         .attr("x", function(d) {return d.x})
- //         .attr("y", function(d) {return d.y})
- //         .text(function(d) {return d.text});
 </script>

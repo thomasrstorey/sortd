@@ -1,8 +1,19 @@
 <div class="container">
+  <h1>Solution</h1>
   <div class="row">
-    <h1>Solution</h1>
-    {{#if renderer}}
-    {{> renderer}}
-    {{/if}}
+    <div class="two-thirds column">
+      {{#if renderer}}
+      {{> renderer}}
+      {{/if}}
+    </div>
+    <div class="one-third column" id="description-column">
+      <p id="description-text"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="twelve columns">
+      <button id="button-back"><i class="fa fa-angle-left"></i> Back</button>
+      <button class="button-primary" id="button-next">Next <i class="fa fa-angle-right"></i></button>
+    </span>
   </div>
 </div>

@@ -1,0 +1,174 @@
+{
+  "startText": "here's a problem",
+  "endText": "  'abeeehlmoprrs",
+  "steps": [
+    {
+      "src": 3,
+      "dest": 2,
+      "beforeStr": "here's a problem",
+      "afterStr": "heer's a problem",
+      "description": "To start sorting out this problem, smoothly swap the letter e at slot 3 with the character r at index 2."
+    },
+    {
+      "src": 4,
+      "dest": 3,
+      "beforeStr": "heer's a problem",
+      "afterStr": "hee'rs a problem",
+      "description": "Robotically trade the letter ' at slot 4 with the letter r at location 3."
+    },
+    {
+      "src": 6,
+      "dest": 4,
+      "beforeStr": "hee'rs a problem",
+      "afterStr": "hee' sra problem",
+      "description": "At this time, roughly swap the symbol  at slot 6 with the letter r at index 4."
+    },
+    {
+      "src": 7,
+      "dest": 5,
+      "beforeStr": "hee' sra problem",
+      "afterStr": "hee' ars problem",
+      "description": "The next step is to gently switch the symbol a at 7 with the letter s at slot 5."
+    },
+    {
+      "src": 8,
+      "dest": 6,
+      "beforeStr": "hee' ars problem",
+      "afterStr": "hee' a srproblem",
+      "description": "Carefully swap the  at 8 with the letter r at position 6."
+    },
+    {
+      "src": 12,
+      "dest": 7,
+      "beforeStr": "hee' a srproblem",
+      "afterStr": "hee' a brproslem",
+      "description": "Carefully exchange the glyph b at index 12 with the symbol s at index 7."
+    },
+    {
+      "src": 13,
+      "dest": 8,
+      "beforeStr": "hee' a brproslem",
+      "afterStr": "hee' a blprosrem",
+      "description": "Forcefully switch the letter l at position 13 with the glyph r at index 8."
+    },
+    {
+      "src": 14,
+      "dest": 9,
+      "beforeStr": "hee' a blprosrem",
+      "afterStr": "hee' a blerosrpm",
+      "description": "Swiftly substitute the e at slot 14 with the glyph p at position 9."
+    },
+    {
+      "src": 15,
+      "dest": 10,
+      "beforeStr": "hee' a blerosrpm",
+      "afterStr": "hee' a blemosrpr",
+      "description": "Carefully substitute the m at position 15 with the r at location 10."
+    },
+    {
+      "src": 3,
+      "dest": 0,
+      "beforeStr": "hee' a blemosrpr",
+      "afterStr": "'eeh a blemosrpr",
+      "description": "Continuing, roughly switch the character ' at index 3 with the letter h at location 0."
+    },
+    {
+      "src": 4,
+      "dest": 1,
+      "beforeStr": "'eeh a blemosrpr",
+      "afterStr": "' ehea blemosrpr",
+      "description": "With that done, robotically trade the  at position 4 with the glyph e at index 1."
+    },
+    {
+      "src": 5,
+      "dest": 2,
+      "beforeStr": "' ehea blemosrpr",
+      "afterStr": "' ahee blemosrpr",
+      "description": "Gently trade the symbol a at position 5 with the letter e at index 2."
+    },
+    {
+      "src": 6,
+      "dest": 3,
+      "beforeStr": "' ahee blemosrpr",
+      "afterStr": "' a eehblemosrpr",
+      "description": "Right here, authentically swap the  at 6 with the h at position 3."
+    },
+    {
+      "src": 7,
+      "dest": 4,
+      "beforeStr": "' a eehblemosrpr",
+      "afterStr": "' a behelemosrpr",
+      "description": "Algorithmically interchange the b at location 7 with the symbol e at 4."
+    },
+    {
+      "src": 9,
+      "dest": 5,
+      "beforeStr": "' a behelemosrpr",
+      "afterStr": "' a behelemosrpr",
+      "description": "At this time, forcefully switch the letter e at position 9 with the glyph e at position 5."
+    },
+    {
+      "src": 4,
+      "dest": 4,
+      "beforeStr": "' a behelemosrpr",
+      "afterStr": "' a behelemosrpr",
+      "description": "Continuing, gently exchange the character b at index 4 with the letter b at index 4."
+    },
+    {
+      "src": 3,
+      "dest": 0,
+      "beforeStr": "' a behelemosrpr",
+      "afterStr": "  a'behelemosrpr",
+      "description": "Gently swap the glyph  at position 3 with the glyph ' at slot 0."
+    },
+    {
+      "src": 3,
+      "dest": 2,
+      "beforeStr": "  a'behelemosrpr",
+      "afterStr": "  'abehelemosrpr",
+      "description": "Forcefully exchange the glyph ' at index 3 with the symbol a at 2."
+    },
+    {
+      "src": 9,
+      "dest": 6,
+      "beforeStr": "  'abehelemosrpr",
+      "afterStr": "  'abeeelhmosrpr",
+      "description": "Smoothly interchange the letter e at slot 9 with the letter h at index 6."
+    },
+    {
+      "src": 9,
+      "dest": 8,
+      "beforeStr": "  'abeeelhmosrpr",
+      "afterStr": "  'abeeehlmosrpr",
+      "description": "Gently exchange the symbol h at position 9 with the letter l at position 8."
+    },
+    {
+      "src": 14,
+      "dest": 12,
+      "beforeStr": "  'abeeehlmosrpr",
+      "afterStr": "  'abeeehlmoprsr",
+      "description": "Robotically exchange the glyph p at index 14 with the s at 12."
+    },
+    {
+      "src": 15,
+      "dest": 13,
+      "beforeStr": "  'abeeehlmoprsr",
+      "afterStr": "  'abeeehlmoprsr",
+      "description": "At this point, mechanically interchange the letter r at position 15 with the symbol r at 13."
+    },
+    {
+      "src": 12,
+      "dest": 12,
+      "beforeStr": "  'abeeehlmoprsr",
+      "afterStr": "  'abeeehlmoprsr",
+      "description": "Curiously trade the letter p at location 12 with the glyph p at slot 12."
+    },
+    {
+      "src": 15,
+      "dest": 14,
+      "beforeStr": "  'abeeehlmoprsr",
+      "afterStr": "  'abeeehlmoprrs",
+      "description": "And now finally, carefully substitute the symbol r at location 15 with the letter s at location 14."
+    }
+  ]
+}

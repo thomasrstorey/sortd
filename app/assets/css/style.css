@@ -161,3 +161,11 @@ input[type="button"].button-primary:focus{
 .section-description {
   margin-bottom: 1.2rem;
 }
+
+#button-next{
+  float: right;
+}
+
+#button-back{
+  float: left;
+}

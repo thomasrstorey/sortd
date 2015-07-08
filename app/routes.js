@@ -6,9 +6,7 @@ module.exports = function (app){
   var dgen = require('./lib/descriptgen.js');
   var jf = require('jsonfile');
   jf.spaces = 2;
-  var crypto = require('crypto');
   var templater = require(path.join(__dirname, './lib/templater.js'));
-  var md5 = crypto.createHash('md5');
 
   app.get('/sort', function (req, res){
     templater.compilePage(["sort", "renderer", "loading", "share"], function(page){
@@ -42,7 +40,7 @@ module.exports = function (app){
     console.log(prob);
     var stepsObj = qsgen.generateSteps(prob);
     dgen.describe(stepsObj.steps, function(stepsd){
-        var hash = md5.update(prob.replace(' ', '_') + Date.now(), 'utf8').digest('hex');
+        var hash = require('crypto').createHash('md5').update(prob.replace(' ', '_') + Date.now(), 'utf8').digest('hex');
         var filename = hash + ".json";
         var filepath = path.join(__dirname, '/db/', filename);
         console.log("writing: " + filepath);
