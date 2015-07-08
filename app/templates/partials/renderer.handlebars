@@ -25,14 +25,15 @@ var margin = {top: 80, right: 20, bottom: 80, left: 20},
   var text;
   var data;
   var index = 0;
-
+  // TRIGGER LOAD MODAL
   d3.json(filepath, function(error, json) {
     if (error) return console.warn(error);
     solution = json;
-    var next = init(solution.steps);
-    var intervalID = window.setInterval(next, 2000);
+    var iterator = init(solution.steps);
+    $("#button-back").click(iterator.back);
+    $("#button-next").click(iterator.next);
+    // WAIT ABOUT 3 SECONDS AND THEN CLOSE LOAD MODAL
   });
-  // var next = init(steps);
 
   function getID(){
     var search = window.location.search;
@@ -87,17 +88,34 @@ var margin = {top: 80, right: 20, bottom: 80, left: 20},
         .attr("x", function(d) {return d.x})
         .attr("y", function(d) {return d.y})
         .text(function(d) {return d.text});
-      return function(){
-        var step = steps[index];
-        swap(step.src, step.dest, step);
-        shift(index, step, step.src, step.dest);
-        $("#description-text").html(step.description);
-        index++;
+      $("#description-text").html(steps[index].description);
+
+      var next = function(){
+        if(index < steps.length){
+          var step = steps[index];
+          swap(step.src, step.dest, step);
+          shift(index, step, step.src, step.dest, 1);
+          $("#description-text").html(step.description);
+          index++;
+          if(index == steps.length + 1){
+            // TRIGGER SHARE MODAL
+          }
+        }
       }
+      var back = function(){
+        if(index > 0){
+          index--;
+          var step = steps[index];
+          swap(step.src, step.dest, step);
+          shift(index, step, step.src, step.dest, -1);
+          $("#description-text").html(step.description);
+        }
+      }
+      return {next: next, back: back};
   }
 
-  function shift(index, step, src, dest){
-    var resultArr = step.afterStr.split('');
+  function shift(index, step, src, dest, direction){
+    var resultArr = direction > 0 ? step.afterStr.split('') : step.beforeStr.split('');
     data = offset(resultArr, lineHeight);
     text = svg.selectAll("text")
        .data(data);
