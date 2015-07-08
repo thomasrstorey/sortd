@@ -103,9 +103,9 @@ var margin = {top: 80, right: 20, bottom: 80, left: 20},
           shift(index, step, step.src, step.dest, 1);
           $("#description-text").html(step.description);
           index++;
-          if(index == steps.length + 1){
-            // TRIGGER SHARE MODAL
-          }
+        }
+        if(index == steps.length){
+          $(".share-modal-container").toggleClass("show");
         }
       }
       var back = function(){

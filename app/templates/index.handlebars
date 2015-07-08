@@ -3,14 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sortd</title>
+    <meta property="og:url" content="http://sort-apostrophe-d.com/" />
+    <meta property="og:title" content="Sort'd" />
+    <meta property="og:site_name" content="Sort'd" />
+    <meta property="og:description" content="Let us sort out your problems!" />
+    <meta property="og:image" content="http://sort-apostrophe-d.com/app/assets/img/sortd-logo-square.png" />
+    <title>Sort'd - Sort Out Your Problems</title>
     <link rel="stylesheet" type="text/css" href="../../../bower_components/skeleton/css/skeleton.css"></link>
     <link rel="stylesheet" type="text/css" href="../../../bower_components/skeleton/css/normalize.css"></link>
     <link rel="stylesheet" type="text/css" href="app/assets/css/style.css"></link>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <!-- <link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'> -->
-    <!-- <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'> -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="../../../bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../../bower_components/progressbar.js/dist/progressbar.min.js"></script>
@@ -19,6 +22,9 @@
   <body>
     {{#if loading}}
     {{> loading}}
+    {{/if}}
+    {{#if share}}
+    {{> share}}
     {{/if}}
     <div class="container">
     <nav class="navbar">
@@ -30,11 +36,9 @@
         <ul class="mobile-navbar-list">
           <li class="navbar-item"><a class="navbar-link" href="/sort">Sort</a></li>
           <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#share">Share</a></li>
         </ul>
       <div class="two-thirds column">
         <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="#share">Share</a></li>
           <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
           <li class="navbar-item"><a class="navbar-link" href="/sort">Sort</a></li>
         </ul>
@@ -51,9 +55,6 @@
         {{> show}}
     {{else if sort}}
       {{> sort}}
-    {{/if}}
-    {{#if share}}
-    {{> share}}
     {{/if}}
   </body>
   <script type="text/javascript" src="/app/assets/js/navbar.js"></script>

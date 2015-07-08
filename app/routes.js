@@ -9,7 +9,7 @@ module.exports = function (app){
   var templater = require(path.join(__dirname, './lib/templater.js'));
 
   app.get('/sort', function (req, res){
-    templater.compilePage(["sort", "renderer", "loading", "share"], function(page){
+    templater.compilePage(["sort"], function(page){
       res.send(page);
     });
   });

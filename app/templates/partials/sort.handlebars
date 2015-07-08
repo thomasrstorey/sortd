@@ -26,10 +26,11 @@
   });
 
   $(".remaining-chars").text("Remaining characters: " + (200 - $("textarea").val().length));
+  $("#submit").prop("disabled", true);
 
   $("textarea").bind('input propertychange', function() {
     $(".remaining-chars").text("Remaining characters: " + (200 - this.value.length));
-    if(200 - this.value.length < 0){
+    if(200 - this.value.length < 0 || this.value.length <= 0){
       $("#submit").prop("disabled", true);
     } else {
       $("#submit").prop('disabled', false);

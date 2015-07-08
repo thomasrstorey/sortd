@@ -16,7 +16,7 @@ a web app for sorting out your problems
 - [x] basic template (handlebars, css)
 - [ ] individual page layouts
   - [x] landing (100% width, big pictures)
-  - [ ] about (me pic, bio)
+  - [x] about (me pic, bio)
   - [x] sort (d3 canvas, text directions, next/back, stage directions)
 - [x] d3 canvas
   - [x] bind and render text
@@ -24,4 +24,4 @@ a web app for sorting out your problems
 - [x] send text to server with jq + ajax
 - [x] give json to d3 to bind, iterate through
 - [x] loading modal
-- [ ] share modal (https://dev.twitter.com/web/tweet-button https://developers.facebook.com/docs/sharing/web)
+- [x] share modal (https://dev.twitter.com/web/tweet-button https://developers.facebook.com/docs/sharing/web)
