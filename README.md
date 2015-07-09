@@ -1,6 +1,14 @@
 # sortd
 a web app for sorting out your problems
 
+## Artist Statement
+
+_Sort'd_ is an opportunistic, poetic, playful web intervention that capitalizes on the ambiguous nature of the abstruct, unhuman network, part of which is the internet. It plays the tropes of the techno-optimistic, neoliberal world as a farcical narrative device, toward a deliberate attempt at misunderstanding and miscommunication. The site is totally functional, and does exactly what it says it does. It promises to 'sort out your problems', and it does in fact take a representation of the problem, and sort it. In the gulf between semantic communication between the user and the machine, its perspective and vitality may be considered as both apart from, and a part of the human.
+
+Sorting, as a task, is one of the most important in computer science, as it forms the basis for other more complex tasks. Its role as an essential task and the familiarity with which the problem can be expressed have combined to contribute to sorting's prominence as a subject of study for both researchers and students. A sorting algorithm receives a set of unordered information as input and produces an ordered permutation of that information, according to some key. _Sort'd_ uses the classic "quicksort" algorithm, which is a recursive, partition based solution, first described by Tony Hoare in 1960. It selects a character from the whole set, and then partitions the set into smaller unordered sets, with all the values smaller than the selected character in one partiion, and the values greater in the other. This process is then repeated on the unordered partitions until the set is ordered.
+
+The poetic aspect of _Sort'd_ pivots on the falliability of communication. Writing is constructed from meaning in the mind of the writer, and then performs as a set of protocols to construct new meaning in the mind of the reader. This process happens whether one or both or none of the parties involved is a machine. _Sort'd_ comprehends information given to it from its own, machinic perspective.
+
 ## development roadmap
 
 ### backend
@@ -14,7 +22,7 @@ a web app for sorting out your problems
 ### frontend
 
 - [x] basic template (handlebars, css)
-- [ ] individual page layouts
+- [x] individual page layouts
   - [x] landing (100% width, big pictures)
   - [x] about (me pic, bio)
   - [x] sort (d3 canvas, text directions, next/back, stage directions)
@@ -24,4 +32,3 @@ a web app for sorting out your problems
 - [x] send text to server with jq + ajax
 - [x] give json to d3 to bind, iterate through
 - [x] loading modal
-- [x] share modal (https://dev.twitter.com/web/tweet-button https://developers.facebook.com/docs/sharing/web)
