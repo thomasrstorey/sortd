@@ -1,0 +1,24 @@
+<div class="section sorted">
+  <div class="container">
+    <h2>Sort'd Problems</h2>
+    {{#each problems}}
+    <div class="row problem">
+      <div class="five columns">
+        <p><a class='unsorted-link' href='{{link}}'>{{startText}}</a></p>
+      </div>
+      <div class="two columns">
+        <div class="sorted-arrow-right">
+          <i class='fa fa-long-arrow-right'></i>
+        </div>
+        <div class="sorted-arrow-down">
+          <i class='fa fa-long-arrow-down'></i>
+        </div>
+      </div>
+      <div class="five columns">
+        <p><a class="sorted-link" href='{{link}}'>{{endText}}</a></p>
+      </div>
+      </div>
+    {{/each}}
+  </div>
+  </div>
+</div>

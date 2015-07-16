@@ -87,6 +87,15 @@ input[type="button"].button-primary:focus{
   color: #FFF;
 }
 
+@media (min-width: 550px) {
+  .navbar-link{
+    margin-left: 100px;
+    text-decoration: none;
+    line-height: 6.5rem;
+    color: #FFF;
+  }
+}
+
 .navbar-toggle{
   display: inline;
   float:right;
@@ -96,10 +105,25 @@ input[type="button"].button-primary:focus{
   cursor: pointer;
 }
 
-@media (min-width: 550px) {
+#logo-col{
+  width: 100%;
+  display: block;
+  z-index: 1;
+  background: #ffa07a;
+  margin-top: -0.5rem;
+}
+
+@media (min-width: 960px) {
 
   .navbar-toggle{
     display: none;
+  }
+
+  .navbar-link{
+    margin-left: 55px;
+    text-decoration: none;
+    line-height: 6.5rem;
+    color: #FFF;
   }
 
   .spacer{
@@ -137,6 +161,14 @@ input[type="button"].button-primary:focus{
     border-bottom: none;
   }
 
+  #logo-col{
+    width: 30.667%;
+    display: inline;
+    z-index: 1;
+    background: #ffa07a;
+    margin-top: -0.5rem;
+  }
+
 }
 
 #logo-link{
@@ -145,12 +177,6 @@ input[type="button"].button-primary:focus{
   background: #ffa07a;
   z-index: 1;
   display: inline;
-}
-
-#logo-col{
-  z-index: 1;
-  background: #ffa07a;
-  margin-top: -0.5rem;
 }
 
 #logo-text{
@@ -327,4 +353,44 @@ input[type="button"].button-primary:focus{
 .sort-another-button{
   margin: 0px auto;
   box-sizing: border-box;
+}
+
+.problem{
+  margin-top: 2em;
+  border-bottom: 1px solid #AAA;
+}
+
+.sorted-link{
+  font-size: 2em;
+  text-decoration: none;
+  word-wrap: break-word;
+  font-weight: 700;
+}
+
+.unsorted-link{
+  font-size: 2em;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+.sorted-arrow-right{
+  font-size: 2.5em;
+  display: none;
+}
+
+.sorted-arrow-down{
+  font-size: 2.5em;
+  display: block;
+}
+
+@media (min-width: 550px) {
+  .sorted-arrow-right{
+    font-size: 2.5em;
+    display: block;
+  }
+
+  .sorted-arrow-down{
+    font-size: 2.5em;
+    display: none;
+  }
 }

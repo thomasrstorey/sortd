@@ -1,6 +1,12 @@
 # sortd
 a web app for sorting out your problems
 
+### TO DO
+
+- [x] add "sorted problems" page, with topbar link
+- [x] underline spaces in the d3 visualization when swapping them
+- [x] when the letter being swapped is a space, generate "space" instead of " " in the text description
+
 ## Artist Statement
 
 _Sort'd_ is an opportunistic, poetic, playful web intervention that capitalizes on the ambiguous nature of the abstruct, unhuman network, part of which is the internet. It plays the tropes of the techno-optimistic, neoliberal world as a farcical narrative device, toward a deliberate attempt at misunderstanding and miscommunication. The site is totally functional, and does exactly what it says it does. It promises to 'sort out your problems', and it does in fact take a representation of the problem, and sort it. In the gulf between semantic communication between the user and the machine, its perspective and vitality may be considered as both apart from, and a part of the human.

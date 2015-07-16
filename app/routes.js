@@ -14,6 +14,12 @@ module.exports = function (app){
     });
   });
 
+  app.get('/sorted', function (req, res){
+    templater.compilePage(["sorted"], function(page){
+      res.send(page);
+    });
+  });
+
   app.get('/show', function(req, res){
     templater.compilePage(["show", "renderer", "loading", "share"], function(page){
       res.send(page);

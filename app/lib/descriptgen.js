@@ -46,6 +46,12 @@ module.exports = (function (){
       iterm2 : '',
       cterm2 : ''
     };
+    if(selection.src === " "){
+      selection.src = "space";
+    }
+    if(selection.dest === " "){
+      selection.dest = "space";
+    }
     var template = _.template(vocab.template);
     var otype = "first";
     if(step > 0){

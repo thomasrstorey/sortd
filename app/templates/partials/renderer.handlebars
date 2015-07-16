@@ -131,19 +131,31 @@ var margin = {top: 80, right: 20, bottom: 80, left: 20},
        .append("text")
        .attr("x", function(d) {return d.x})
        .attr("y", function(d) {return d.y})
+       .attr("xml:space", 'preserve')
        .text(function(d) {return d.text});
     // text.
     text.transition()
        .attr("x", function(d, i) {return d.x})
        .attr("y", function(d, i) {return d.y})
+       .attr("xml:space", 'preserve')
        .attr("style", function(d, i){
          if(i == src || i == dest){
-           return "font-weight: 700; font-size:"+lineHeight+"px;"
+           if(d.text == " "){
+             return "font-weight: 400; font-size:"+lineHeight+"px; text-decoration: underline;"
+           } else {
+             return "font-weight: 700; font-size:"+lineHeight+"px;"
+           }
          } else {
            return "font-weight: 400; font-size:"+lineHeight+"px;"
          }
        })
-       .text(function(d, i) {return d.text})
+       .text(function(d, i) {
+         if(i == src || i == dest){
+           return d.text === " " ? " " : d.text;
+         } else {
+          return d.text;
+         }
+         })
        .delay(function(d, i) {return (i == src || i == dest) ? 0 :500})
        .duration(500);
 
@@ -160,13 +172,25 @@ var margin = {top: 80, right: 20, bottom: 80, left: 20},
       charA
         .attr("x", next[bIndex].x)
         .attr("y", next[bIndex].y)
-        .attr("style", "font-weight: 700; font-size:"+lineHeight+"px;")
-        .text(next[bIndex].text);
+        .attr("xml:space", 'preserve')
+        .attr("style", function(d){
+          if(next[bIndex].text === " "){
+            return "font-weight: 400; font-size:"+lineHeight+"px; text-decoration: underline;";
+          } else {
+            return "font-weight: 700; font-size:"+lineHeight+"px;";
+          }})
+        .text(function(d){return next[bIndex].text === " " ? " " : next[bIndex].text});
       charB
         .attr("x", next[aIndex].x)
         .attr("y", next[aIndex].y)
-        .attr("style", "font-weight: 700; font-size:"+lineHeight+"px;")
-        .text(next[aIndex].text);
+        .attr("xml:space", 'preserve')
+        .attr("style", function(d){
+          if(next[aIndex].text === " "){
+            return "font-weight: 400; font-size:"+lineHeight+"px; text-decoration: underline;";
+          } else {
+            return "font-weight: 700; font-size:"+lineHeight+"px;";
+          }})
+        .text(function(d){return next[aIndex].text === " " ? " " : next[aIndex].text});
     }
   }
 </script>
